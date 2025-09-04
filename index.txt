@@ -1,0 +1,41 @@
+1488. Shortest distance
+
+There are N villages, numbered 1 to N.
+
+Between the villages, there are M undirected roads. The i-th road connects village Aᵢ and village Bᵢ, and its length is Cᵢ.
+
+It is guaranteed that all villages are connected.
+
+There are K villages with shops. The number of the j-th shop village is Xⱼ.
+
+Then, there are Q queries. For the k-th query, you are given a village number Yₖ, and you need to determine the shortest distance from village Yₖ to its nearest shop.
+
+Input format
+
+The first line contains two integers N and M.
+
+The next M lines each contain three integers Aᵢ, Bᵢ, Cᵢ, meaning that the i-th road connects villages Aᵢ and Bᵢ, with length Cᵢ.
+
+The next line contains the integer K.
+
+The next K lines each contain an integer Xⱼ, the number of a village with a shop.
+
+The next line contains the integer Q.
+
+The next Q lines each contain an integer Yₖ, the number of the village being queried.
+
+Output format
+
+For each query, output a single integer: the shortest distance from that village to the nearest shop.
+
+Data constraints
+
+2 ≤ N ≤ 10^5
+
+N − 1 ≤ M ≤ min(N(N−1)/2, 10^5)
+
+1 ≤ Q ≤ 10^5
+
+1 ≤ K ≤ N
+
+1 ≤ Cᵢ ≤ 10000
