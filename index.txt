@@ -39,3 +39,38 @@ N − 1 ≤ M ≤ min(N(N−1)/2, 10^5)
 1 ≤ K ≤ N
 
 1 ≤ Cᵢ ≤ 10000
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Problem: Connect Tourist Attractions (Minimum Road Cost)
+
+You are the mayor of a very old city with n major tourist attractions. The i-th
+attraction is at 3D coordinates (xi, yi, zi).
+
+To build a bidirectional road between two attractions A(x1, y1, z1) and
+B(x2, y2, z2), the cost is:
+    cost(A, B) = min( |x1 - x2|, |y1 - y2|, |z1 - z2| )
+
+Build a network of roads so that it is possible to travel between any pair of
+attractions (the graph is connected) and the total cost is minimized.
+Return the minimum total cost.
+
+Input format
+- First line: integer n
+- Next n lines: three integers xi yi zi for each attraction
+
+Output format
+- One integer: the minimum total cost to connect all attractions
+
+Sample Input
+3
+1 5 7
+2 9 4
+1 3 9
+
+Sample Output
+1
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
