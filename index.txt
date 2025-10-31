@@ -74,3 +74,43 @@ Sample Output
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+CSES – Investigation
+
+You are given a directed, weighted graph with nodes 1..n and m edges.
+Each edge is a flight (a → b) with a non-negative cost c.
+
+Task:
+From node 1 to node n, compute the following:
+1) The minimum total cost.
+2) The number of distinct shortest paths (mod 1,000,000,007).
+3) The minimum number of edges among all shortest paths.
+4) The maximum number of edges among all shortest paths.
+
+Two paths are considered different if their sequences of vertices/edges differ.
+Only paths whose total cost equals the minimum cost are considered in (2)–(4).
+
+Input:
+- First line: n m
+- Next m lines: a b c  (an edge from a to b with cost c)
+
+Output:
+- Four integers on one line:
+  min_cost  count_mod  min_edges_on_shortest  max_edges_on_shortest
+
+Constraints (typical):
+- 1 ≤ n ≤ 1e5
+- 1 ≤ m ≤ 2e5
+- 1 ≤ a, b ≤ n
+- 0 ≤ c ≤ 1e9
+- Graph is directed; costs are non-negative (so Dijkstra applies).
+
+Notes:
+- Use Dijkstra from node 1 to obtain shortest distances.
+- While relaxing edges, also maintain for each node:
+  ways[v] = # of shortest paths to v (mod 1e9+7),
+  mn[v]   = minimum edges on a shortest path to v,
+  mx[v]   = maximum edges on a shortest path to v.
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
