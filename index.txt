@@ -207,3 +207,58 @@ Output:
 1 4 5
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Title: Connect Components at Minimum Cost
+
+You are given an undirected graph with N vertices and M existing edges.
+The graph may have multiple connected components. Each existing edge has a
+positive weight w.
+
+You may add new edges to connect different components. The cost to add an
+edge between two components A and B is defined as:
+
+    cost(A, B) = minEdge(A) + minEdge(B)
+
+where minEdge(X) is the minimum weight among the existing edges that lie
+inside component X.
+
+Task
+Compute the minimum total cost to make the whole graph connected by adding
+edges under the above rule. If this is impossible (i.e., some component
+contains no existing edge, so minEdge is undefined), output -1.
+
+Input
+- N M
+- Next M lines: u v w  (1 ≤ u, v ≤ N; u ≠ v; w > 0)
+
+Output
+- A single integer: the minimum total cost to connect all components, or -1
+  if not possible.
+
+Constraints
+- 1 ≤ N ≤ 2e5
+- 0 ≤ M ≤ 2e5
+- 1 ≤ w ≤ 1e9
+
+Notes / Solution Idea
+- Let the connected components be C1..Ck (k ≥ 1).
+- For each Ci, compute mi = minEdge(Ci). If any Ci has no edges → print -1.
+- If k = 1 → already connected → answer = 0.
+- If k ≥ 2 → it is optimal to connect all components in a star using the
+  component with the globally smallest mi.
+  Minimum total cost:
+      sum(mi for all i) + (k - 2) * min(mi)
+
+Example
+Input
+5 2
+1 2 7
+4 5 3
+Output
+13
+Explanation
+Components: {1,2} with minEdge=7, {3} has no edges → impossible → -1.
+(If vertex 3 had an edge inside its component, we would compute by the formula.)
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
