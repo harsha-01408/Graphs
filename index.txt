@@ -306,3 +306,53 @@ Output:
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Converging Maze: Nearest Meeting Cell
+
+Problem Description:
+You are given a maze with N cells. Each cell may have multiple entry
+points but not more than one exit (i.e., the doors are unidirectional,
+like valves).
+
+The cells are named with integer values from 0 to N − 1.
+
+You have to find the "nearest meeting cell":
+
+Given any two cells C1 and C2, find the closest cell Cm that can be
+reached from both C1 and C2 by following the directed exits.
+
+If there is no such common reachable cell, return -1.
+
+Graph definition:
+You are given an array edge[0..N-1] where:
+- If edge[i] = j (0 ≤ j < N), there is a one-way passage from cell i to cell j.
+- If edge[i] = -1, then cell i has no outgoing passage.
+
+Functionally, each cell has at most one outgoing edge.
+
+Input Format:
+1. An integer T, denoting the number of test cases.
+2. For each test case, 3 lines:
+   a) First line: an integer N — the number of cells.
+   b) Second line: N integers edge[0], edge[1], ..., edge[N−1] —
+      edge[i] is the cell that can be reached from i in one step,
+      or -1 if the i-th cell has no exit.
+   c) Third line: two integers C1 and C2 — the starting cells.
+
+Output Format:
+For each test case, print a single integer:
+- The index of the nearest meeting cell (NMC), i.e., a cell that is
+  reachable from both C1 and C2 and minimizes max(dist(C1, Cm), dist(C2, Cm)).
+- If no such cell exists, print -1.
+
+Sample Input:
+1
+23
+4 4 1 4 13 8 8 0 8 14 9 15 11 -1 10 15 22 22 22 22 22 21
+9 2
+
+Sample Output:
+4
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
