@@ -262,3 +262,47 @@ Components: {1,2} with minEdge=7, {3} has no edges → impossible → -1.
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Converging Maze: Largest Sum Cycle
+
+You are given a maze with N cells. Each cell may have multiple entry points
+but at most one exit (i.e., the entry/exit points are unidirectional doors).
+
+The cells are numbered from 0 to N - 1.
+
+You are also given an array edge[0..N-1] such that:
+- If edge[i] = j (0 ≤ j < N), then there is a one-way passage from cell i to cell j.
+- If edge[i] = -1, then cell i has no outgoing passage (it is an exit / dead-end).
+
+Interpret this as a directed graph in which each node i has at most one outgoing edge.
+
+Definition:
+- A cycle is a path where you can start from some cell and, by repeatedly
+  following the outgoing edges, eventually return to that same cell.
+- The sum of a cycle is defined as the sum of the cell numbers (node indices)
+  that lie on that cycle.
+
+Task:
+Find the maximum sum of any cycle in this graph.
+If there are no cycles at all, return -1.
+
+Input format:
+1. The first line contains an integer N — the number of cells.
+2. The second line contains N integers: edge[0], edge[1], ..., edge[N-1],
+   where edge[i] is the index of the cell reachable from i, or -1 if i has no exit.
+
+Output format:
+Print a single integer — the sum of the largest-sum cycle in the maze,
+or -1 if there is no cycle.
+
+Example:
+Input:
+23
+4 4 1 4 13 8 8 0 8 14 9 15 11 -1 10 15 22 22 22 22 22 21
+
+Output:
+45
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
