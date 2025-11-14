@@ -356,3 +356,48 @@ Sample Output:
 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Converging Maze: Maximum Weight Node
+
+Problem Description:
+You are given a maze with N cells. Each cell may have multiple entry
+points but not more than one exit (i.e., the doors are unidirectional,
+like valves).
+
+The cells are named with integer values from 0 to N − 1.
+
+You have to find:
+The node number of the "maximum weight node".
+
+Definition:
+The weight of a node v is defined as the sum of the node numbers (indices)
+of all nodes that have a direct edge pointing to v.
+That is,
+    weight[v] = sum of all i such that edge[i] = v.
+If no node points to v, then weight[v] = 0.
+
+Input Format:
+1. An integer T, denoting the number of test cases, followed by 2T lines
+   (each test case uses 2 lines).
+2. For each test case:
+   a) The first line contains an integer N — the number of cells.
+   b) The second line contains N integers: edge[0], edge[1], ..., edge[N−1],
+      where:
+        - edge[i] = j (0 ≤ j < N) means there is a one-way passage from
+          cell i to cell j.
+        - edge[i] = -1 means the i-th cell has no outgoing edge.
+
+Output Format:
+For each test case, print a single integer:
+- The node number (index) that has the maximum weight.
+
+Sample Input:
+1
+23
+4 4 1 4 13 8 8 0 8 14 9 15 11 -1 10 15 22 22 22 22 22 21
+
+Sample Output:
+22
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
