@@ -435,3 +435,23 @@ Output:
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
+Breakfast
+
+There are N items from 1 to N available to make breakfast.
+Given M pairs of items (A, B), item A must come before item B while making breakfast.
+
+If making breakfast is not possible, print -1.
+Otherwise, print the lexicographically smallest arrangement.
+
+Input:
+- First line: T (number of test cases)
+For each test case:
+- One line: N M
+- Next M lines: A B (A must come before B)
+
+Output:
+- For each test case:
+  - Print -1 if impossible
+  - else print the lexicographically smallest valid ordering of 1..N
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
