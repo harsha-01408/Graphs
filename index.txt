@@ -455,3 +455,19 @@ Output:
   - else print the lexicographically smallest valid ordering of 1..N
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+2) B — Bicycle Coloring
+You are given a graph that is guaranteed to be a bicycle wheel graph (a cycle + spokes paths meeting at a central node).
+Task:
+
+* Color all vertices so that no adjacent vertices share the same color.
+
+* Use the minimum possible number of colors.
+
+* Output:
+
+  1. the minimum number of colors x
+
+  2. an array c1..cn where ci is the color of node i (1 ≤ ci ≤ x)
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
