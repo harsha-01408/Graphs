@@ -471,3 +471,18 @@ Task:
   2. an array c1..cn where ci is the color of node i (1 ≤ ci ≤ x)
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+You’re given an undirected friendship graph (people = nodes, friendships = edges).
+
+A “trio” is three people who are all friends with each other (a triangle).
+
+For any trio:
+
+Each person’s friendship score = how many friends they have outside that trio (i.e., their total degree − 2).
+
+The friendship sum of the trio = sum of the three friendship scores.
+
+Task: Find the minimum friendship sum among all trios in the graph.
+If no trio exists, return -1.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
