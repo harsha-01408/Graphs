@@ -486,3 +486,110 @@ Task: Find the minimum friendship sum among all trios in the graph.
 If no trio exists, return -1.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Problem Statement
+
+You are given an undirected weighted graph with N nodes labeled from 0 to N-1.
+
+Each edge represents a road with a success probability of traveling safely through it.
+Additionally, some roads are marked as “risky”.
+
+You are allowed to use at most K risky edges in your path.
+
+Your task is to find the maximum probability of successfully traveling from a given
+start node to a given end node using at most K risky edges.
+
+If no such path exists, return 0.
+
+
+
+Input Format
+
+- Integer N: number of nodes
+- Integer M: number of edges
+- Next M lines: each line contains two integers u v representing an undirected edge
+- One line with M floating-point numbers: success probability of each edge
+- One line with M integers (0 or 1): 1 if the edge is risky, 0 otherwise
+- One line with two integers: start end
+- Integer K: maximum number of risky edges allowed
+
+
+
+Output Format
+
+- A floating-point number representing the maximum probability of reaching
+  from start to end using at most K risky edges.
+- The result should be printed with 5 decimal places.
+
+
+
+Notes
+
+- Nodes are 0-indexed
+- Routes are bidirectional
+- Probability of a path is the product of probabilities of all edges on that path
+
+
+
+Sample Input 1
+
+3
+3
+0 1
+1 2
+0 2
+0.5 0.5 0.2
+0 1 0
+0 2
+1
+
+
+Sample Output 1
+
+0.25000
+
+
+Explanation
+
+Path 0 → 2  
+Probability = 0.2  
+Risky edges used = 0  
+
+Path 0 → 1 → 2  
+Probability = 0.5 × 0.5 = 0.25  
+Risky edges used = 1 (allowed)  
+
+Best valid path = 0 → 1 → 2  
+Answer = 0.25000
+
+
+
+Sample Input 2
+
+3
+3
+0 1
+1 2
+0 2
+0.5 0.5 0.3
+1 1 0
+0 2
+0
+
+
+Sample Output 2
+
+0.30000
+
+
+Explanation
+
+Path 0 → 1 → 2 uses 2 risky edges (not allowed)
+
+Path 0 → 2  
+Probability = 0.3  
+Risky edges used = 0  
+
+Answer = 0.30000
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
