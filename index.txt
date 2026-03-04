@@ -593,3 +593,29 @@ Risky edges used = 0
 Answer = 0.30000
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Shortest Path in a Directed Graph With Negative Weights
+
+You are given a directed graph with n nodes labeled 0..n-1 and m directed edges.
+Each edge is described by (u, v, w) meaning there is an edge from u to v with
+weight w. Edge weights may be negative.
+
+You are also given two nodes: src and dst.
+
+Return the minimum possible total weight of any path from src to dst.
+If dst is not reachable from src, return -1.
+
+Function signature (LeetCode-like):
+long long shortestPathModified(
+    int n,
+    vector<vector<int>> edges,   // each = {u, v, w}
+    int src,
+    int dst
+);
+
+Notes:
+- Plain Dijkstra’s algorithm does not work with negative edge weights.
+- (If the problem statement mentions it) if a negative cycle can be used on a
+  path from src to dst, the shortest path may be undefined.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
